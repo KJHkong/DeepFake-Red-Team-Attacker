@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=65.5", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepfake-redteam-attacker"
+version = "0.2.0.dev0"
+description = "Traceable dual-branch pipeline for authorized Deepfake research"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = ["pydantic==2.10.4", "Pillow==10.2.0", "numpy==2.1.2"]
+
+[project.optional-dependencies]
+test = ["pytest==8.3.4"]
+rpc = ["thrift==0.11.0"]
+
+[project.urls]
+Repository = "https://github.com/KJHkong/DeepFake-Red-Team-Attacker"
+Demo = "https://deepfake-redteam-showcase.pages.dev/"
+
+[tool.setuptools]
+py-modules = ["attacker_cli"]
+
+[tool.setuptools.packages.find]
+include = ["core*", "shared*", "modules*", "scripts*", "examples*"]
+
+[tool.setuptools.package-data]
+"modules.generator" = ["metadata/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"

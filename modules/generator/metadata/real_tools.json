@@ -1,0 +1,199 @@
+[
+  {
+    "name": "inswapper",
+    "display_name": "InSwapper 128",
+    "version": "0.1.0",
+    "taxonomy": [
+      "Deepfake/Face_Swapping"
+    ],
+    "input_schema": {
+      "$ref": "/openapi.json#/components/schemas/AttackRequest-Input",
+      "description": "Shared AttackRequest; validated snapshots only. See input_requirements."
+    },
+    "output_schema": {
+      "$ref": "/openapi.json#/components/schemas/Candidate",
+      "description": "Candidate with image/png Artifact and metadata; internal port; Registry.invoke wraps in ModuleResult."
+    },
+    "backend": "onnx_cpu",
+    "mock": false,
+    "capabilities": [
+      "image",
+      "identity_transfer",
+      "single_face",
+      "paste_back"
+    ],
+    "input_requirements": {
+      "roles": [
+        {
+          "role": "source",
+          "min_count": 1,
+          "max_count": 1
+        },
+        {
+          "role": "target",
+          "min_count": 1,
+          "max_count": 1
+        }
+      ],
+      "prompt_required": false
+    },
+    "default_parameters": {},
+    "controllable_parameters": [],
+    "parameter_schema": {
+      "additionalProperties": false,
+      "description": "Largest face, CPU provider, det512 and paste-back are fixed in v0.1.",
+      "properties": {},
+      "title": "InSwapperParameters",
+      "type": "object"
+    },
+    "strengths": [
+      "identity_conditioning",
+      "stable_inference",
+      "low_integration_risk"
+    ],
+    "limitations": [
+      "native_face_128_soft_texture",
+      "largest_face_only",
+      "no_independent_identity_benchmark"
+    ],
+    "availability": "not_ready",
+    "ready_for_registry": false,
+    "local_eval_status": "not_run",
+    "evidence": {},
+    "planner_notes": [
+      "External models/environments must be configured and validated locally."
+    ],
+    "estimated_duration_s": 20,
+    "output_type": "image"
+  },
+  {
+    "name": "simswap",
+    "display_name": "SimSwap224",
+    "version": "0.1.0",
+    "taxonomy": [
+      "Deepfake/Face_Swapping"
+    ],
+    "input_schema": {
+      "$ref": "/openapi.json#/components/schemas/AttackRequest-Input",
+      "description": "Shared AttackRequest; validated snapshots only. See input_requirements."
+    },
+    "output_schema": {
+      "$ref": "/openapi.json#/components/schemas/Candidate",
+      "description": "Candidate with image/png Artifact and metadata; internal port; Registry.invoke wraps in ModuleResult."
+    },
+    "backend": "pytorch_simswap224",
+    "mock": false,
+    "capabilities": [
+      "image",
+      "identity_transfer",
+      "single_face",
+      "paste_back"
+    ],
+    "input_requirements": {
+      "roles": [
+        {
+          "role": "source",
+          "min_count": 1,
+          "max_count": 1
+        },
+        {
+          "role": "target",
+          "min_count": 1,
+          "max_count": 1
+        }
+      ],
+      "prompt_required": false
+    },
+    "default_parameters": {},
+    "controllable_parameters": [],
+    "parameter_schema": {
+      "additionalProperties": false,
+      "description": "Largest face, CPU provider, det512 and paste-back are fixed in v0.1.",
+      "properties": {},
+      "title": "InSwapperParameters",
+      "type": "object"
+    },
+    "strengths": [
+      "identity_conditioning",
+      "official_parsing_pasteback"
+    ],
+    "limitations": [
+      "native224_face",
+      "official_logo_retained",
+      "highest_detection_confidence_only"
+    ],
+    "availability": "not_ready",
+    "ready_for_registry": false,
+    "local_eval_status": "not_run",
+    "evidence": {},
+    "planner_notes": [
+      "External models/environments must be configured and validated locally."
+    ],
+    "estimated_duration_s": 45,
+    "output_type": "image"
+  },
+  {
+    "name": "liveportrait_static",
+    "display_name": "LivePortrait Static Retargeting",
+    "version": "0.1.0",
+    "taxonomy": [
+      "Deepfake/Face_Editing"
+    ],
+    "input_schema": {
+      "$ref": "/openapi.json#/components/schemas/AttackRequest-Input",
+      "description": "Shared AttackRequest; validated snapshots only. See input_requirements."
+    },
+    "output_schema": {
+      "$ref": "/openapi.json#/components/schemas/Candidate",
+      "description": "Candidate with image/png Artifact and metadata; internal port; Registry.invoke wraps in ModuleResult."
+    },
+    "backend": "pytorch_numeric_retargeting",
+    "mock": false,
+    "capabilities": [
+      "image",
+      "static_retargeting",
+      "paste_back",
+      "canonical_action_adapter"
+    ],
+    "input_requirements": {
+      "roles": [
+        {
+          "role": "image",
+          "min_count": 1,
+          "max_count": 1
+        }
+      ],
+      "prompt_required": true
+    },
+    "default_parameters": {},
+    "controllable_parameters": [
+      "action_id"
+    ],
+    "parameter_schema": {
+      "additionalProperties": false,
+      "description": "Largest face, CPU provider, det512 and paste-back are fixed in v0.1.",
+      "properties": {},
+      "title": "InSwapperParameters",
+      "type": "object"
+    },
+    "strengths": [
+      "official_eye_lip_retargeting",
+      "source_canvas_pasteback"
+    ],
+    "limitations": [
+      "not_native_text",
+      "only_frozen10_actions",
+      "absolute_pose_control_approximate",
+      "extreme_pose_distortion"
+    ],
+    "availability": "not_ready",
+    "ready_for_registry": false,
+    "local_eval_status": "not_run",
+    "evidence": {},
+    "planner_notes": [
+      "External models/environments must be configured and validated locally."
+    ],
+    "estimated_duration_s": 45,
+    "output_type": "image"
+  }
+]

@@ -1,0 +1,44 @@
+# Local environments, private model assets and generated artifacts
+.venv/
+env/
+runtime/
+.tool_envs/
+.tool_assets/
+third_party/
+input_samples/
+outputs/
+runs/
+logs/
+data/
+test_data/
+checkpoints/
+weights/
+dist/
+build/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# Operator-only deployment configuration and credentials
+deployment_local.py
+configs/*.local.json
+.env
+.env.*
+.secrets/
+.private/
+*.pem
+*.key
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.pkl
+*.tar
+*.zip
+*.mp4
+*.mov
+
+# Explicitly approved, finished public walkthrough (not raw business media).
+!docs/assets/redteam_demo.mp4

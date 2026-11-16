@@ -1,0 +1,132 @@
+{
+  "version": "v2_edit_50_actions_v1_1023",
+  "format": "JSON-compatible YAML",
+  "output_modality": "image",
+  "left_right_convention": "viewer_image_coordinates; left/right refer to the nose pointing toward that image edge",
+  "preservation_constraints": "Preserve the person's identity, hairstyle, clothing, background, original image framing, and overall lighting. Keep all facial attributes other than the requested edit as unchanged as possible. Do not mirror or flip the entire image.",
+  "constraints_are_soft_instructions": true,
+  "prompt_rewriting_allowed": false,
+  "blink_or_temporal_tasks": false,
+  "actions": [
+    {
+      "action_id": "mouth_open_to_closed",
+      "quota": 8,
+      "group": "mouth",
+      "initial_state": "mouth_open",
+      "target_state": "mouth_closed",
+      "difficulty": "standard",
+      "prompt_body": "Close the person's mouth naturally so that the upper and lower lips gently meet. Keep the head pose and eye state unchanged.",
+      "pose_constraints": "",
+      "complete_prompt": "Close the person's mouth naturally so that the upper and lower lips gently meet. Keep the head pose and eye state unchanged.\n\nPreserve the person's identity, hairstyle, clothing, background, original image framing, and overall lighting. Keep all facial attributes other than the requested edit as unchanged as possible. Do not mirror or flip the entire image.",
+      "complete_prompt_sha256": "be3eafa992189a28dfca8ef4cccfb04433fb265d8127d9fd4d058be14f94caab"
+    },
+    {
+      "action_id": "mouth_closed_to_open",
+      "quota": 8,
+      "group": "mouth",
+      "initial_state": "mouth_closed",
+      "target_state": "mouth_open",
+      "difficulty": "standard",
+      "prompt_body": "Open the person's mouth naturally, creating a clearly visible gap between the upper and lower lips. Avoid an exaggerated facial expression. Keep the head pose and eye state unchanged.",
+      "pose_constraints": "",
+      "complete_prompt": "Open the person's mouth naturally, creating a clearly visible gap between the upper and lower lips. Avoid an exaggerated facial expression. Keep the head pose and eye state unchanged.\n\nPreserve the person's identity, hairstyle, clothing, background, original image framing, and overall lighting. Keep all facial attributes other than the requested edit as unchanged as possible. Do not mirror or flip the entire image.",
+      "complete_prompt_sha256": "39bfac7f451f4effff808a3102f3b4965571f9a4dabc89413e2ecc0d8b516a98"
+    },
+    {
+      "action_id": "left_to_frontal",
+      "quota": 3,
+      "group": "head_pose",
+      "initial_state": "head_left",
+      "target_state": "head_frontal",
+      "difficulty": "standard",
+      "prompt_body": "Rotate the person's head to face directly toward the camera. Center the nose toward the camera and show a natural frontal facial pose. Keep the camera viewpoint and background unchanged.",
+      "pose_constraints": "Change the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.",
+      "complete_prompt": "Rotate the person's head to face directly toward the camera. Center the nose toward the camera and show a natural frontal facial pose. Keep the camera viewpoint and background unchanged.\n\nChange the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.\n\nPreserve the person's identity, hairstyle, clothing, background, original image framing, and overall lighting. Keep all facial attributes other than the requested edit as unchanged as possible. Do not mirror or flip the entire image.",
+      "complete_prompt_sha256": "d11c957c4dad466914103a30d9071a76065bbfa89dbb0dff189ce8c2f7fb7db7"
+    },
+    {
+      "action_id": "left_to_right",
+      "quota": 3,
+      "group": "head_pose",
+      "initial_state": "head_left",
+      "target_state": "head_right",
+      "difficulty": "hard_pose_transition",
+      "prompt_body": "Rotate the person's head from its current left-facing pose to a natural right-facing three-quarter pose, so that the nose points toward the right edge of the image. Do not flip or mirror the image.",
+      "pose_constraints": "Change the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.",
+      "complete_prompt": "Rotate the person's head from its current left-facing pose to a natural right-facing three-quarter pose, so that the nose points toward the right edge of the image. Do not flip or mirror the image.\n\nChange the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.\n\nPreserve the person's identity, hairstyle, clothing, background, original image framing, and overall lighting. Keep all facial attributes other than the requested edit as unchanged as possible. Do not mirror or flip the entire image.",
+      "complete_prompt_sha256": "604bedece7407eb398cf706a69d14455e3cde1727910e1200e5c94d9cccfacdb"
+    },
+    {
+      "action_id": "right_to_frontal",
+      "quota": 3,
+      "group": "head_pose",
+      "initial_state": "head_right",
+      "target_state": "head_frontal",
+      "difficulty": "standard",
+      "prompt_body": "Rotate the person's head to face directly toward the camera. Center the nose toward the camera and show a natural frontal facial pose. Keep the camera viewpoint and background unchanged.",
+      "pose_constraints": "Change the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.",
+      "complete_prompt": "Rotate the person's head to face directly toward the camera. Center the nose toward the camera and show a natural frontal facial pose. Keep the camera viewpoint and background unchanged.\n\nChange the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.\n\nPreserve the person's identity, hairstyle, clothing, background, original image framing, and overall lighting. Keep all facial attributes other than the requested edit as unchanged as possible. Do not mirror or flip the entire image.",
+      "complete_prompt_sha256": "d11c957c4dad466914103a30d9071a76065bbfa89dbb0dff189ce8c2f7fb7db7"
+    },
+    {
+      "action_id": "right_to_left",
+      "quota": 3,
+      "group": "head_pose",
+      "initial_state": "head_right",
+      "target_state": "head_left",
+      "difficulty": "hard_pose_transition",
+      "prompt_body": "Rotate the person's head from its current right-facing pose to a natural left-facing three-quarter pose, so that the nose points toward the left edge of the image. Do not flip or mirror the image.",
+      "pose_constraints": "Change the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.",
+      "complete_prompt": "Rotate the person's head from its current right-facing pose to a natural left-facing three-quarter pose, so that the nose points toward the left edge of the image. Do not flip or mirror the image.\n\nChange the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.\n\nPreserve the person's identity, hairstyle, clothing, background, original image framing, and overall lighting. Keep all facial attributes other than the requested edit as unchanged as possible. Do not mirror or flip the entire image.",
+      "complete_prompt_sha256": "49e468df5458aab7a50786b038c53e198cece396a46f7d1511d692a498c805f1"
+    },
+    {
+      "action_id": "frontal_to_left",
+      "quota": 3,
+      "group": "head_pose",
+      "initial_state": "head_frontal",
+      "target_state": "head_left",
+      "difficulty": "standard",
+      "prompt_body": "Turn the person's head from a frontal pose into a natural left-facing three-quarter pose, so that the nose points toward the left edge of the image. Do not rotate the entire image or move the camera.",
+      "pose_constraints": "Change the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.",
+      "complete_prompt": "Turn the person's head from a frontal pose into a natural left-facing three-quarter pose, so that the nose points toward the left edge of the image. Do not rotate the entire image or move the camera.\n\nChange the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.\n\nPreserve the person's identity, hairstyle, clothing, background, original image framing, and overall lighting. Keep all facial attributes other than the requested edit as unchanged as possible. Do not mirror or flip the entire image.",
+      "complete_prompt_sha256": "e2caa247bb0a2457863719e4b4de4769e70ae8885df31d39ca70c81a135aa4ff"
+    },
+    {
+      "action_id": "frontal_to_right",
+      "quota": 3,
+      "group": "head_pose",
+      "initial_state": "head_frontal",
+      "target_state": "head_right",
+      "difficulty": "standard",
+      "prompt_body": "Turn the person's head from a frontal pose into a natural right-facing three-quarter pose, so that the nose points toward the right edge of the image. Do not rotate the entire image or move the camera.",
+      "pose_constraints": "Change the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.",
+      "complete_prompt": "Turn the person's head from a frontal pose into a natural right-facing three-quarter pose, so that the nose points toward the right edge of the image. Do not rotate the entire image or move the camera.\n\nChange the person's head pose, not the orientation of the image canvas. Do not rotate the entire image or move the camera.\n\nPreserve the person's identity, hairstyle, clothing, background, original image framing, and overall lighting. Keep all facial attributes other than the requested edit as unchanged as possible. Do not mirror or flip the entire image.",
+      "complete_prompt_sha256": "5bb3d85516a131cf0850413ab08adca442c6a05438f1208b576b4bc949b543e4"
+    },
+    {
+      "action_id": "eyes_open_to_closed",
+      "quota": 8,
+      "group": "eyes",
+      "initial_state": "eyes_open",
+      "target_state": "eyes_closed",
+      "difficulty": "standard",
+      "prompt_body": "Gently close both of the person's eyes, with the eyelids fully shut rather than merely squinting. Keep the mouth state and head pose unchanged.",
+      "pose_constraints": "",
+      "complete_prompt": "Gently close both of the person's eyes, with the eyelids fully shut rather than merely squinting. Keep the mouth state and head pose unchanged.\n\nPreserve the person's identity, hairstyle, clothing, background, original image framing, and overall lighting. Keep all facial attributes other than the requested edit as unchanged as possible. Do not mirror or flip the entire image.",
+      "complete_prompt_sha256": "0de26eeea556207192ad27984ca934c0d48caf78c00c71854064c996e1b73e02"
+    },
+    {
+      "action_id": "eyes_closed_to_open",
+      "quota": 8,
+      "group": "eyes",
+      "initial_state": "eyes_closed",
+      "target_state": "eyes_open",
+      "difficulty": "standard",
+      "prompt_body": "Open both of the person's eyes naturally so that the eyes are clearly visible. Keep the mouth state and head pose unchanged.",
+      "pose_constraints": "",
+      "complete_prompt": "Open both of the person's eyes naturally so that the eyes are clearly visible. Keep the mouth state and head pose unchanged.\n\nPreserve the person's identity, hairstyle, clothing, background, original image framing, and overall lighting. Keep all facial attributes other than the requested edit as unchanged as possible. Do not mirror or flip the entire image.",
+      "complete_prompt_sha256": "8eeb9cd7cbff1662e2c9690f5dae64949a4a7ced0ab7b86225871cd0121f73c4"
+    }
+  ]
+}

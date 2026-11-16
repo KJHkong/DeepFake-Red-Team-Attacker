@@ -1,0 +1,11 @@
+{
+  "host": "127.0.0.1",
+  "port": 19004,
+  "timeout_ms": 30000,
+  "batch_size": 8,
+  "threshold": 0.5,
+  "configured_service_version": "unconfigured",
+  "deployment_mode": "unverified",
+  "production_threshold_confirmed": false,
+  "target": "External Deepfake Detector"
+}

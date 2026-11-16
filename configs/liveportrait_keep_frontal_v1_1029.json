@@ -1,0 +1,16 @@
+{
+  "bank_version": "liveportrait_keep_frontal_v1_1029",
+  "status": "frozen_parameters_pilot_quality_pending",
+  "entry": {
+    "prompt_id": "keep_frontal_canonical_day10",
+    "action": "keep_frontal",
+    "intensity_level": "canonical",
+    "prompt_text": "Keep the head in a frontal pose. Preserve identity, face shape, skin tone, non-target eye and mouth state, hair, clothing, background and illumination as far as the model allows.",
+    "control_spec": {
+      "lip_ratio": null,
+      "eye_ratio": null,
+      "target_yaw_degrees": 0.0
+    },
+    "native_text_conditioning": false
+  }
+}

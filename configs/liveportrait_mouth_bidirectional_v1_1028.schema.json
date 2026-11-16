@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Frozen Day9 bidirectional mouth v1",
+  "type": "object",
+  "const": {
+    "bank_version": "liveportrait_mouth_bidirectional_v1_1028",
+    "generator_id": "liveportrait_static",
+    "status": "frozen_for_manual_pilot",
+    "native_text_conditioning": false,
+    "seed_consumed": false,
+    "parent_config": {
+      "path": "configs/liveportrait_actions_frozen_v1_1028.json",
+      "sha256": "8720df8ec786bf440c49b02728ebd9eb085bf2ad8970c90410b029dc667f6c4f"
+    },
+    "lip_semantics": "Target vertical lip separation / horizontal mouth width. Native model has no universal bounds; local official UI exposes0..0.8. This version permits only0/.2/.35/.5; attained ratio is not guaranteed.",
+    "semantic_text_role": "English descriptions are provenance metadata; actual model input is numeric retargeting, not language",
+    "scheduling": {
+      "version": "mouth_direction_balanced_v1",
+      "direction_weights": {
+        "mouth_closed_to_open": 0.5,
+        "mouth_open_to_closed": 0.5
+      },
+      "open_level_weights": {
+        "L1": 0.3333333333333333,
+        "L2": 0.3333333333333333,
+        "L3": 0.3333333333333333
+      },
+      "odd_total": "fixed-seed remainder, direction counts differ by at most1",
+      "default_enabled": false
+    },
+    "source_filter_default_enabled": false,
+    "pose_conversions_enabled": false,
+    "human_output_quality": "pending_manual_review",
+    "entries": [
+      {
+        "prompt_id": "mouth_closed_to_open_l1_day9",
+        "action": "mouth_closed_to_open",
+        "intensity_level": "L1",
+        "prompt_text": "Open the mouth with mild intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+        "native_text_conditioning": false,
+        "control_spec": {
+          "lip_ratio": 0.2,
+          "eye_ratio": null,
+          "target_yaw_degrees": null
+        },
+        "required_source_state": "mouth_closed",
+        "target_state": "mouth_open",
+        "source_state_basis": "user-labelled source plus recorded local visual precheck; never 1-NISP-mouth"
+      },
+      {
+        "prompt_id": "mouth_closed_to_open_l2_day9",
+        "action": "mouth_closed_to_open",
+        "intensity_level": "L2",
+        "prompt_text": "Open the mouth with moderate intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+        "native_text_conditioning": false,
+        "control_spec": {
+          "lip_ratio": 0.35,
+          "eye_ratio": null,
+          "target_yaw_degrees": null
+        },
+        "required_source_state": "mouth_closed",
+        "target_state": "mouth_open",
+        "source_state_basis": "user-labelled source plus recorded local visual precheck; never 1-NISP-mouth"
+      },
+      {
+        "prompt_id": "mouth_closed_to_open_l3_day9",
+        "action": "mouth_closed_to_open",
+        "intensity_level": "L3",
+        "prompt_text": "Open the mouth with strong intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+        "native_text_conditioning": false,
+        "control_spec": {
+          "lip_ratio": 0.5,
+          "eye_ratio": null,
+          "target_yaw_degrees": null
+        },
+        "required_source_state": "mouth_closed",
+        "target_state": "mouth_open",
+        "source_state_basis": "user-labelled source plus recorded local visual precheck; never 1-NISP-mouth"
+      },
+      {
+        "prompt_id": "mouth_open_to_closed_canonical_day9_mouth_v1",
+        "action": "mouth_open_to_closed",
+        "intensity_level": "canonical",
+        "prompt_text": "Close the mouth naturally and gently until the lips meet. Preserve identity, face shape, skin tone, head pose, eyes, hair, clothing, background and illumination as far as the model allows. Do not introduce unrelated expression changes.",
+        "native_text_conditioning": false,
+        "control_spec": {
+          "lip_ratio": 0.0,
+          "eye_ratio": null,
+          "target_yaw_degrees": null
+        },
+        "required_source_state": "mouth_open",
+        "target_state": "mouth_closed",
+        "source_state_basis": "user-labelled source plus recorded local visual precheck; NISP class scores are auxiliary only"
+      }
+    ]
+  }
+}

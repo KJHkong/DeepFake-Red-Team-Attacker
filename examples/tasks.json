@@ -1,0 +1,17 @@
+{
+  "tasks": [
+    {
+      "task_id": "swap_example_01",
+      "inputs": [
+        {"role": "source", "path": "input_samples/source.png", "display_allowed": false},
+        {"role": "target", "path": "input_samples/target.png", "display_allowed": false}
+      ]
+    },
+    {
+      "task_id": "edit_example_01",
+      "inputs": [
+        {"role": "source", "path": "input_samples/edit_source.png", "display_allowed": false}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "generator_priority": ["mock_image_generator", "face_swap", "text_to_image"],
+  "modifier_priority": ["mock_image_modifier"],
+  "default_mock_modifier": "mock_image_modifier",
+  "overhead_reserve_s": 0
+}

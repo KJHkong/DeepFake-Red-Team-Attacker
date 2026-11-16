@@ -1,0 +1,12 @@
+{
+  "allowed_roots": [
+    "input_samples"
+  ],
+  "max_file_bytes": 20971520,
+  "max_pixels": 25000000,
+  "allowed_formats": [
+    "PNG",
+    "JPEG",
+    "WEBP"
+  ]
+}

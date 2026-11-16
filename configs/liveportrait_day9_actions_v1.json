@@ -1,0 +1,137 @@
+{
+  "bank_version": "liveportrait_action_tuning_v1_1028",
+  "generator_id": "liveportrait_static",
+  "status": "pilot_configured",
+  "native_text_conditioning": false,
+  "seed_consumed": false,
+  "entries": [
+    {
+      "prompt_id": "mouth_closed_to_open_l1_day9",
+      "action": "mouth_closed_to_open",
+      "intensity_level": "L1",
+      "prompt_text": "Open the mouth with mild intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+      "native_text_conditioning": false,
+      "control_spec": {
+        "lip_ratio": 0.2,
+        "eye_ratio": null,
+        "target_yaw_degrees": null
+      }
+    },
+    {
+      "prompt_id": "mouth_closed_to_open_l2_day9",
+      "action": "mouth_closed_to_open",
+      "intensity_level": "L2",
+      "prompt_text": "Open the mouth with moderate intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+      "native_text_conditioning": false,
+      "control_spec": {
+        "lip_ratio": 0.35,
+        "eye_ratio": null,
+        "target_yaw_degrees": null
+      }
+    },
+    {
+      "prompt_id": "mouth_closed_to_open_l3_day9",
+      "action": "mouth_closed_to_open",
+      "intensity_level": "L3",
+      "prompt_text": "Open the mouth with strong intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+      "native_text_conditioning": false,
+      "control_spec": {
+        "lip_ratio": 0.5,
+        "eye_ratio": null,
+        "target_yaw_degrees": null
+      }
+    },
+    {
+      "prompt_id": "frontal_to_left_l1_day9",
+      "action": "frontal_to_left",
+      "intensity_level": "L1",
+      "prompt_text": "Turn the face toward the left side of the image with mild intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+      "native_text_conditioning": false,
+      "control_spec": {
+        "lip_ratio": null,
+        "eye_ratio": null,
+        "target_yaw_degrees": 25.0
+      }
+    },
+    {
+      "prompt_id": "frontal_to_left_l2_day9",
+      "action": "frontal_to_left",
+      "intensity_level": "L2",
+      "prompt_text": "Turn the face toward the left side of the image with moderate intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+      "native_text_conditioning": false,
+      "control_spec": {
+        "lip_ratio": null,
+        "eye_ratio": null,
+        "target_yaw_degrees": 35.0
+      }
+    },
+    {
+      "prompt_id": "frontal_to_left_l3_day9",
+      "action": "frontal_to_left",
+      "intensity_level": "L3",
+      "prompt_text": "Turn the face toward the left side of the image with strong intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+      "native_text_conditioning": false,
+      "control_spec": {
+        "lip_ratio": null,
+        "eye_ratio": null,
+        "target_yaw_degrees": 45.0
+      }
+    },
+    {
+      "prompt_id": "frontal_to_right_l1_day9",
+      "action": "frontal_to_right",
+      "intensity_level": "L1",
+      "prompt_text": "Turn the face toward the right side of the image with mild intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+      "native_text_conditioning": false,
+      "control_spec": {
+        "lip_ratio": null,
+        "eye_ratio": null,
+        "target_yaw_degrees": -25.0
+      }
+    },
+    {
+      "prompt_id": "frontal_to_right_l2_day9",
+      "action": "frontal_to_right",
+      "intensity_level": "L2",
+      "prompt_text": "Turn the face toward the right side of the image with moderate intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+      "native_text_conditioning": false,
+      "control_spec": {
+        "lip_ratio": null,
+        "eye_ratio": null,
+        "target_yaw_degrees": -35.0
+      }
+    },
+    {
+      "prompt_id": "frontal_to_right_l3_day9",
+      "action": "frontal_to_right",
+      "intensity_level": "L3",
+      "prompt_text": "Turn the face toward the right side of the image with strong intensity. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+      "native_text_conditioning": false,
+      "control_spec": {
+        "lip_ratio": null,
+        "eye_ratio": null,
+        "target_yaw_degrees": -45.0
+      }
+    },
+    {
+      "prompt_id": "eyes_open_to_closed_canonical_day9",
+      "action": "eyes_open_to_closed",
+      "intensity_level": "canonical",
+      "prompt_text": "Close both eyes naturally and completely. Preserve identity, face shape, skin tone, hair, clothing, background and illumination as far as the model allows.",
+      "native_text_conditioning": false,
+      "control_spec": {
+        "lip_ratio": null,
+        "eye_ratio": 0.0,
+        "target_yaw_degrees": null
+      }
+    }
+  ],
+  "scope": "Day9 opt-in20 only; historical106 and default generator profiles unchanged",
+  "lip_semantics": "target landmark vertical mouth opening / horizontal mouth width, not probability",
+  "pose_semantics": "absolute motion-model yaw in degrees; positive=image left, negative=image right; achieved pose not guaranteed",
+  "pose_range_note": "Official UI uses relative yaw within +/-25. Absolute35/45 are explicitly experimental matrix extrapolations, not author-validated limits.",
+  "removed_actions": [
+    "eyes_closed_to_open"
+  ],
+  "source_filter_default_enabled": false
+}
