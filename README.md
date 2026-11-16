@@ -2,7 +2,14 @@
 
 **A traceable, source-aware dual-branch pipeline for authorized Deepfake research.**
 
-[Live Web Demo](https://deepfake-redteam-showcase.pages.dev/) · [Video Demo](docs/assets/redteam_demo.mp4) · [Showcase Source](https://github.com/KJHkong/deepfake-redteam-showcase) · [Quick Start](#quick-start) · [Real Runtime](docs/runtime.md)
+<p align="center">
+  <a href="https://deepfake-redteam-showcase.pages.dev/"><img src="https://img.shields.io/badge/Web_Demo-Project_Page-F38020?style=flat&amp;logo=cloudflarepages&amp;logoColor=white" alt="Web Demo · Project Page"></a>
+  <a href="docs/assets/redteam_demo.mp4"><img src="https://img.shields.io/badge/Demo_Video-40s_Walkthrough-DB2777?style=flat" alt="Demo Video · 40s Walkthrough"></a>
+  <a href="https://github.com/KJHkong/deepfake-redteam-showcase"><img src="https://img.shields.io/badge/GitHub-Showcase_Source-2563EB?style=flat&amp;logo=github&amp;logoColor=white" alt="GitHub · Showcase Source"></a>
+  <br>
+  <a href="#quick-start"><img src="https://img.shields.io/badge/Quick_Start-Python_3.11-3776AB?style=flat&amp;logo=python&amp;logoColor=white" alt="Quick Start · Python 3.11"></a>
+  <a href="docs/runtime.md"><img src="https://img.shields.io/badge/Real_Runtime-Setup_Guide-0D9488?style=flat" alt="Real Runtime · Setup Guide"></a>
+</p>
 
 面向授权红队评估与合成数据生产的研究工程。项目将 **Source + Target 换脸** 与 **Source-only 状态感知编辑** 接入同一套输入校验、Artifact血缘、可选图像处理、Gate1和检测评估流程。
 
